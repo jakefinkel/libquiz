@@ -3,6 +3,7 @@
 	gcc -dynamiclib -o libquiz.dylib -dy printer.c
 .test: test.c
 	gcc -L. -lquiz -o test test.c
+	install_name_tool -change libquiz.dylib @executable_path/libquiz.dylib test
 
 all: .libquiz | .test
 
