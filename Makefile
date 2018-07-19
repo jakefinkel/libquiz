@@ -8,5 +8,5 @@ all: .libquiz | .test
 
 install: 
 	mkdir libquiz && mv libquiz.dylib libquiz/ && mv test libquiz/ && cp printer.h libquiz/
-	zip -R libquiz.zip libquiz
+	zip libquiz.zip libquiz/*
 	rm -rf libquiz/
